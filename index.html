@@ -10,12 +10,20 @@
   </head>
 
   <body>
-    <header>
-      <h1>When you play the game of thrones, you win or you die</h1>
-    </header>
-
-    <main class="grid-container">
+    <main class="grid-container left-side">
+      <header class="banner-area">
+        <img class="banner-pic" src="./assets/banner.png" alt="" />
+      </header>
+      <header class="header-section">
+        <h1>When you play the game of thrones, you win or you die..</h1>
+      </header>
+      <header class="banner-area right-side">
+        <img class="banner-pic" src="./assets/banner.png" alt="" />
+      </header>
       <section class="rule-section side-style">
+        <h3 class="rule-info">
+          Trial by Combat
+        </h3>
         <p class="rule-info">
           The rules in this game are very simple. Two champions are chosen and
           whoever picked the winner lives. The odds look even at first, but
@@ -40,30 +48,33 @@
       </section>
       <section class="score-section side-style">
         <div>
-          <span>Total Games:</span>
-          <span></span>
+          <div>Total Trials Fought:</div>
+          <div id="total-counter">0</div>
         </div>
         <div>
-          <span>Games Won:</span>
-          <span></span>
+          <div>Trials Won:</div>
+          <div id="win-counter">0</div>
         </div>
         <div>
-          <span>Games Lost:</span>
-          <span></span>
+          <div>Trials Lost:</div>
+          <div id="lost-counter">0</div>
         </div>
         <div>
-          <span>Games Tied:</span>
-          <span></span>
+          <div>Trials Tied:</div>
+          <div id="tied-counter">0</div>
         </div>
-        <div>
-          <button>Reset</button>
-          <span>Times Reset:</span>
-          <span></span>
+        <div class="reset-area">
+          <button class="reset-button button">Reset Trial Score</button><br />
+          <div>Times Reset:</div>
+          <div id="reset-counter">0</div>
         </div>
       </section>
-      <section class="rule-info-section side-style">
-        <img id="trial-pic" src="./assets/trial.png" alt="" />
-      </section>
+      <img
+        class="rule-info-section"
+        id="trial-pic"
+        src="./assets/trial.png"
+        alt=""
+      />
     </main>
 
     <footer>
