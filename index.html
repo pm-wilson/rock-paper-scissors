@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>When you play the game of thrones, you win or you die</h1>
+    </header>
+
+    <main class="grid-container">
+      <section class="rule-section side-style">
+        <p class="rule-info">
+          The rules in this game are very simple. Two champions are chosen and
+          whoever picked the winner lives. The odds look even at first, but
+          luckily you know a thing or two more than Jon Snow.
+        </p>
+        <ul class="rule-info">
+          Each of the three possible champions are guaranteed to win over
+          another:
+          <li>Rock will always beat Scissors</li>
+          <li>Scissors will always beat Paper</li>
+          <li>Paper will always beat Rock</li>
+        </ul>
+        <p class="rule-info">
+          Choose your champion and start the trail if you dare..
+        </p>
+      </section>
+      <section class="user-select-section">
+        <input type="radio" name="user-select" value="rock" />
+        <input type="radio" name="user-select" value="paper" />
+        <input type="radio" name="user-select" value="scissors" />
+        <button>Begin the Trial</button>
+      </section>
+      <section class="score-section side-style">
+        <div>
+          <span>Total Games:</span>
+          <span></span>
+        </div>
+        <div>
+          <span>Games Won:</span>
+          <span></span>
+        </div>
+        <div>
+          <span>Games Lost:</span>
+          <span></span>
+        </div>
+        <div>
+          <span>Games Tied:</span>
+          <span></span>
+        </div>
+        <div>
+          <button>Reset</button>
+          <span>Times Reset:</span>
+          <span></span>
+        </div>
+      </section>
+      <section class="rule-info-section side-style">
+        <img id="trial-pic" src="./assets/trial.png" alt="" />
+      </section>
+    </main>
+
+    <footer>
+      <div>&copy; 2020 Wilson Empire</div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

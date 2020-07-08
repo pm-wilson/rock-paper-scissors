@@ -1,0 +1,97 @@
+body {
+  --color1: #eab64d;
+  --color2: #930416;
+  --color3: #64000d;
+  --color4: #370003;
+  --color5: #a32927;
+
+  --header-height: 15%;
+  --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
+  --gutter: 30px;
+  --footer-height: 5%;
+  --radius-border: 15px;
+
+  font-family: "Titillium Web", sans-serif;
+  background-color: var(--color3);
+}
+header {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color3);
+  height: var(--header-height);
+}
+
+.rule-info-section {
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#trial-pic {
+  width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-border);
+}
+
+.side-style {
+  background-color: var(--color1);
+  border: solid var(--color4) 5px;
+  border-radius: var(--radius-border);
+  padding: 20px;
+}
+
+.grid-container {
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1.5fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  margin: 0 25px;
+}
+
+.rule-section {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.user-select-section {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  padding: auto;
+  background-color: var(--color2);
+  border: solid var(--color4) 5px;
+  border-radius: var(--radius-border);
+}
+
+.score-section {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+li {
+  padding: 10px 10px 0 10px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: var(--footer-height);
+  display: flex;
+  justify-content: center;
+  background-color: var(--color3);
+  box-shadow: var(--shadow);
+}
