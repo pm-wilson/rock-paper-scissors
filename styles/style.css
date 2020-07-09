@@ -108,8 +108,8 @@ body {
 
 .select-pic {
   margin: 10px;
-  height: 90%;
-  width: 90%;
+  height: 70%;
+  width: 70%;
   border: solid var(--color4) 5px;
   border-radius: var(--radius-border);
   box-shadow: var(--shadow);
