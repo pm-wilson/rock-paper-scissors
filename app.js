@@ -2,13 +2,13 @@
 import { userWins, computerMove } from "./combatUtils.js";
 
 const playButton = document.querySelector("#trial-button"),
-  totalDisplay = document.querySelector("#total-counter"),
-  totalWin = document.querySelector("#win-counter"),
-  totalLoss = document.querySelector("#lost-counter"),
-  totalTied = document.querySelector("#tied-counter"),
+  totalDisplayArea = document.querySelector("#total-counter"),
+  totalWinArea = document.querySelector("#win-counter"),
+  totalLossArea = document.querySelector("#lost-counter"),
+  totalTiedArea = document.querySelector("#tied-counter"),
   resetButton = document.querySelector("#reset-button"),
-  totalResets = document.querySelector("#reset-counter"),
-  winResponse = document.querySelector("#win-response");
+  totalResetsArea = document.querySelector("#reset-counter"),
+  winResponseArea = document.querySelector("#win-response");
 
 // initialize state
 let wins = 0,
@@ -28,17 +28,17 @@ playButton.addEventListener("click", () => {
 
     if (userResult === "win") {
       wins++;
-      winResponse.textContent = "You win! Be sure to pay that champion well.";
+      winResponseArea.textContent = "You win! Be sure to pay that champion well.";
     }
 
     if (userResult === "lose") {
       losses++;
-      winResponse.textContent = "You Lose, at least it wasn't you fighting.";
+      winResponseArea.textContent = "You Lose, at least it wasn't you fighting.";
     }
 
     if (userResult === "tie") {
       ties++;
-      winResponse.textContent = "You both picked the same champion, try again.";
+      winResponseArea.textContent = "You both picked the same champion, try again.";
     }
     updateScore();
   }
@@ -51,9 +51,9 @@ resetButton.addEventListener("click", () => {
 });
 
 function updateScore() {
-  totalDisplay.textContent = wins + losses + ties;
-  totalWin.textContent = wins;
-  totalLoss.textContent = losses;
-  totalTied.textContent = ties;
-  totalResets.textContent = resets;
+  totalDisplayArea.textContent = wins + losses + ties;
+  totalWinArea.textContent = wins;
+  totalLossArea.textContent = losses;
+  totalTiedArea.textContent = ties;
+  totalResetsArea.textContent = resets;
 }
