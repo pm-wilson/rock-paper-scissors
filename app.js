@@ -7,7 +7,8 @@ const playButton = document.querySelector("#trial-button"),
   totalLoss = document.querySelector("#lost-counter"),
   totalTied = document.querySelector("#tied-counter"),
   resetButton = document.querySelector("#reset-button"),
-  totalResets = document.querySelector("#reset-counter");
+  totalResets = document.querySelector("#reset-counter"),
+  winResponse = document.querySelector("#win-response");
 
 // initialize state
 let wins = 0,
@@ -27,14 +28,17 @@ playButton.addEventListener("click", () => {
 
     if (userResult === "win") {
       wins++;
+      winResponse.textContent = "You win! Be sure to pay that champion well.";
     }
 
     if (userResult === "lose") {
       losses++;
+      winResponse.textContent = "You Lose, at least it wasn't you fighting.";
     }
 
     if (userResult === "tie") {
       ties++;
+      winResponse.textContent = "You both picked the same champion, try again.";
     }
     updateScore();
   }
