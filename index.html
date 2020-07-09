@@ -41,10 +41,15 @@
         </p>
       </section>
       <section class="user-select-section">
-        <input type="radio" name="user-select" value="rock" />
-        <input type="radio" name="user-select" value="paper" />
-        <input type="radio" name="user-select" value="scissors" />
-        <button>Begin the Trial</button>
+        <label>
+          <input type="radio" name="user-select" value="rock" />
+        </label>
+        <label>
+          <input type="radio" name="user-select" value="paper" />
+        </label>
+        <label>
+          <input type="radio" name="user-select" value="scissors" />
+        </label>
       </section>
       <section class="score-section side-style">
         <div>
@@ -64,7 +69,7 @@
           <div id="tied-counter">0</div>
         </div>
         <div class="reset-area">
-          <button class="reset-button button">Reset Trial Score</button><br />
+          <button id="reset-button">Reset Trial Score</button><br />
           <div>Times Reset:</div>
           <div id="reset-counter">0</div>
         </div>
@@ -76,6 +81,9 @@
         alt=""
       />
     </main>
+    <div class="trial-area">
+      <button id="trial-button">Begin the Trial</button>
+    </div>
 
     <footer>
       <div>&copy; 2020 Wilson Empire</div>
