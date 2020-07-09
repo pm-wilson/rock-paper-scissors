@@ -1,15 +1,55 @@
 // import functions and grab DOM elements
-const userMove = document.querySelector("input[name = user-select]:checked"),
-  playButton = document.querySelector("#trial-button"),
-  totalDisplay = document.querySelector("#reset-button"),
-  totalWin = document.querySelector("#reset-button"),
-  totalLoss = document.querySelector("#reset-button"),
-  totalTied = document.querySelector("#reset-button"),
-  totalReset = document.querySelector("#reset-button");
+import { userWins, computerMove } from "./combatUtils.js";
+
+const playButton = document.querySelector("#trial-button"),
+  totalDisplay = document.querySelector("#total-counter"),
+  totalWin = document.querySelector("#win-counter"),
+  totalLoss = document.querySelector("#lost-counter"),
+  totalTied = document.querySelector("#tied-counter"),
+  resetButton = document.querySelector("#reset-button"),
+  totalResets = document.querySelector("#reset-counter");
 
 // initialize state
+let wins = 0,
+  losses = 0,
+  ties = 0,
+  resets = 0;
 
 // set event listeners to update state and DOM
 playButton.addEventListener("click", () => {
-  console.log(userMove.value);
+  const userMove = document.querySelector("input:checked");
+
+  if (userMove === null) {
+    alert("You must select a champion to fight!");
+  } else {
+    const computerSelect = computerMove(),
+      userResult = userWins(userMove.value, computerSelect);
+
+    if (userResult === "win") {
+      wins++;
+    }
+
+    if (userResult === "lose") {
+      losses++;
+    }
+
+    if (userResult === "tie") {
+      ties++;
+    }
+    updateScore();
+  }
 });
+
+resetButton.addEventListener("click", () => {
+  (wins = 0), (losses = 0), (ties = 0), resets++;
+
+  updateScore();
+});
+
+function updateScore() {
+  totalDisplay.textContent = wins + losses + ties;
+  totalWin.textContent = wins;
+  totalLoss.textContent = losses;
+  totalTied.textContent = ties;
+  totalResets.textContent = resets;
+}

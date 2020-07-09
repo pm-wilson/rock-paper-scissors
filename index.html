@@ -25,9 +25,9 @@
           Trial by Combat
         </h3>
         <p class="rule-info">
-          The rules in this game are very simple. Two champions are chosen and
-          whoever picked the winner lives. The odds look even at first, but
-          luckily you know a thing or two more than Jon Snow.
+          Two champions are chosen and whoever picked the winner lives. The odds
+          look even at first, but luckily you know a thing or two more than Jon
+          Snow.
         </p>
         <ul class="rule-info">
           Each of the three possible champions are guaranteed to win over
@@ -42,6 +42,12 @@
       </section>
       <section class="user-select-section">
         <label id="rock-area">
+          <input
+            class="select-box"
+            type="radio"
+            name="user-select"
+            value="rock"
+          />
           <img
             class="select-pic"
             id="rock-select"
@@ -49,14 +55,15 @@
             alt="Rock"
           />
           <span class="description rock-description">Rock</span>
+        </label>
+
+        <label id="paper-area">
           <input
             class="select-box"
             type="radio"
             name="user-select"
-            value="rock"
+            value="paper"
           />
-        </label>
-        <label id="paper-area">
           <img
             class="select-pic"
             id="paper-select"
@@ -64,14 +71,15 @@
             alt="Paper"
           />
           <span class="description paper-description">Paper</span>
+        </label>
+
+        <label id="scissors-area">
           <input
             class="select-box"
             type="radio"
             name="user-select"
-            value="paper"
+            value="scissors"
           />
-        </label>
-        <label id="scissors-area">
           <img
             class="select-pic"
             id="scissors-select"
@@ -79,12 +87,6 @@
             alt="Scissor"
           />
           <span class="description scissors-description">Scissors</span>
-          <input
-            class="select-box"
-            type="radio"
-            name="user-select"
-            value="scissors"
-          />
         </label>
       </section>
       <section class="score-section side-style">
@@ -119,6 +121,9 @@
     </main>
     <div class="trial-area">
       <button id="trial-button">Begin the Trial</button>
+    </div>
+    <div class="trial-area gold">
+      <p>Every Click is a New Battle</p>
     </div>
 
     <footer>

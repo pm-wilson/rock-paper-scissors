@@ -247,6 +247,10 @@ footer {
   color: var(--color1);
 }
 
-input:checked {
+input:checked + img {
   border: solid var(--color1) 5px;
+}
+
+.gold {
+  color: var(--color1);
 }
