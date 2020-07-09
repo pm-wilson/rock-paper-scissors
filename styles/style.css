@@ -101,9 +101,76 @@ body {
   border: solid var(--color4) 5px;
   border-radius: var(--radius-border);
   box-shadow: var(--shadow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.select-pic {
+  margin: 10px;
+  height: 90%;
+  width: 90%;
+  border: solid var(--color4) 5px;
+  border-radius: var(--radius-border);
+  box-shadow: var(--shadow);
+  margin: auto;
+  text-align: center;
+}
+
+#rock-area {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  position: relative;
+}
+
+#paper-area {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+}
+
+#scissors-area {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+}
+
+.description {
+  color: var(--color1);
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 3px 3px black;
+}
+
+.rock-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+}
+
+.paper-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+}
+
+.scissors-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 200%);
+}
+
+input {
+  display: none;
 }
 
 #trial-button {
