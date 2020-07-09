@@ -123,6 +123,8 @@ body {
   grid-row-start: 1;
   grid-row-end: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 #paper-area {
@@ -131,6 +133,8 @@ body {
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 #scissors-area {
@@ -139,6 +143,8 @@ body {
   grid-row-start: 2;
   grid-row-end: 2;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .description {
@@ -239,4 +245,8 @@ footer {
   background-color: var(--color3);
   box-shadow: var(--shadow);
   color: var(--color1);
+}
+
+input:checked {
+  border: solid var(--color1) 5px;
 }
